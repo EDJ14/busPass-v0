@@ -16,7 +16,7 @@ const ColorButton = styled.button`
 `;
 
 const BigBlueBus = styled.div`
-  grid-row: 2 / 3;
+  grid-row: 2 / 4;
   grid-column: 1 / 2;
   background-color: white;
 
@@ -25,7 +25,7 @@ const BigBlueBus = styled.div`
 `;
 
 const CircleTT = styled.div`
-  grid-row: 2 / 3;
+  grid-row: 2 / 4;
   grid-column: 2 / 3;
   background-color: rgb(85, 163, 241);
 
@@ -48,16 +48,28 @@ const PictureWordContainer = styled.div`
   grid-row: 3 / -1;
   grid-column: 1 / -1;
   background-color: ${props => props.color};
+  clip-path: polygon(
+    50% 0,
+    75% 14%,
+    100% 14%,
+    100% 100%,
+    0 100%,
+    0 14%,
+    24% 14%
+  );
 `;
 
 class BodyContainer extends Component {
-  state = { color: 'orange' };
+  state = { color: 'orange', time: new Date().getHours(), number: 0 };
 
   changeColor = newColor => {
     this.setState({ color: newColor });
   };
 
   render() {
+    setTimeout(() => {
+      this.setState({ number: this.state.number + 1 });
+    }, 1000);
     return [
       <Inputs>
         <ColorButton onClick={() => this.changeColor('red')} />
@@ -82,8 +94,9 @@ class BodyContainer extends Component {
           src={TT}
         />
       </CircleTT>,
-      <Triangle color={this.state.color} />,
-      <PictureWordContainer color={this.state.color} />
+      <PictureWordContainer color={this.state.color}>
+        {this.state.number}
+      </PictureWordContainer>
     ];
   }
 }
