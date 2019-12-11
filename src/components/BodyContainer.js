@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import * as Vibrant from 'node-vibrant';
+
 import busText from '../img/bigBlueBus.JPG';
 import TT from '../img/TT.JPG';
-
-const Inputs = styled.div`
-  grid-row: 1 / 2;
-  grid-column: 1 / -1;
-  background-color: gray;
-`;
 
 const ColorButton = styled.button`
   width: 4rem;
@@ -16,18 +12,22 @@ const ColorButton = styled.button`
 `;
 
 const BigBlueBus = styled.div`
-  grid-row: 2 / 4;
-  grid-column: 1 / 2;
+  position: absolute;
+  left: 0;
   background-color: white;
+  height: 33%;
+  width: 50%;
 
   display: flex;
   flex-direction: column;
 `;
 
 const CircleTT = styled.div`
-  grid-row: 2 / 4;
-  grid-column: 2 / 3;
-  background-color: rgb(85, 163, 241);
+  position: absolute;
+  right: 0;
+  background-color: rgb(44, 156, 212);
+  height: 33%;
+  width: 50%;
 
   display: flex;
   flex-direction: column;
@@ -45,9 +45,10 @@ const Triangle = styled.div`
 `;
 
 const PictureWordContainer = styled.div`
-  grid-row: 3 / -1;
+  grid-row: 2 / -1;
   grid-column: 1 / -1;
   background-color: ${props => props.color};
+
   clip-path: polygon(
     50% 0,
     75% 14%,
@@ -60,20 +61,15 @@ const PictureWordContainer = styled.div`
 `;
 
 class BodyContainer extends Component {
-  state = { color: 'orange', time: new Date().getHours(), number: 0 };
-
   changeColor = newColor => {
-    this.setState({ color: newColor });
+    this.props.goBack();
   };
 
   render() {
-    setTimeout(() => {
-      this.setState({ number: this.state.number + 1 });
-    }, 1000);
+    let v = new Vibrant(TT);
+    v.getPalette((err, palette) => console.log(palette));
+
     return [
-      <Inputs>
-        <ColorButton onClick={() => this.changeColor('red')} />
-      </Inputs>,
       <BigBlueBus>
         <img
           style={{
@@ -89,14 +85,12 @@ class BodyContainer extends Component {
           style={{
             height: 'fit-content',
             width: 'fit-content',
-            margin: 'auto 0 1rem 10rem'
+            margin: 'auto 4vw 1rem 15vw'
           }}
           src={TT}
         />
       </CircleTT>,
-      <PictureWordContainer color={this.state.color}>
-        {this.state.number}
-      </PictureWordContainer>
+      <PictureWordContainer color={this.props.color}></PictureWordContainer>
     ];
   }
 }
