@@ -4,6 +4,7 @@ import * as Vibrant from 'node-vibrant';
 
 import busText from '../img/bigBlueBus.JPG';
 import TT from '../img/TT.JPG';
+import TimeBox from './Time';
 
 const ColorButton = styled.button`
   width: 4rem;
@@ -66,9 +67,6 @@ class BodyContainer extends Component {
   };
 
   render() {
-    let v = new Vibrant(TT);
-    v.getPalette((err, palette) => console.log(palette));
-
     return [
       <BigBlueBus>
         <img
@@ -90,7 +88,8 @@ class BodyContainer extends Component {
           src={TT}
         />
       </CircleTT>,
-      <PictureWordContainer color={this.props.color}></PictureWordContainer>
+      <PictureWordContainer color={this.props.color}></PictureWordContainer>,
+      <TimeBox />
     ];
   }
 }
