@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const TimeBoxContainer = styled.div`
-  font-size: 10%;
+  font-size: 10rem;
   z-index: 99;
-  position: absolute;
-  bottom: 3rem;
+  grid-row: 7 / 8;
+  grid-column: 1 / -1;
+  color: white;
+  font-weight: bold;
   margin: auto;
 `;
 
