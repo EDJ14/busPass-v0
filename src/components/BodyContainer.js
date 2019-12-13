@@ -14,22 +14,18 @@ const ColorButton = styled.button`
 `;
 
 const BigBlueBus = styled.div`
-  position: absolute;
-  left: 0;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
   background-color: white;
-  height: 33%;
-  width: 50%;
 
   display: flex;
   flex-direction: column;
 `;
 
 const CircleTT = styled.div`
-  position: absolute;
-  right: 0;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
   background-color: rgb(44, 156, 212);
-  height: 33%;
-  width: 50%;
 
   display: flex;
   flex-direction: column;
@@ -62,7 +58,7 @@ const PictureBox = styled.div`
 const Word = styled.div`
   grid-row: 5 / 6;
   grid-column: 1 / -1;
-  font-size: 8rem;
+  font-size: 6rem;
   color: white;
   z-index: 9;
   margin: auto;
@@ -80,7 +76,7 @@ class BodyContainer extends Component {
           style={{
             height: 'fit-content',
             width: 'fit-content',
-            margin: 'auto 3rem'
+            margin: 'auto 15% 1rem 15%'
           }}
           src={busText}
         />
@@ -90,7 +86,7 @@ class BodyContainer extends Component {
           style={{
             height: 'fit-content',
             width: 'fit-content',
-            margin: 'auto 3rem'
+            margin: 'auto auto 1rem 35%'
           }}
           src={TT}
         />

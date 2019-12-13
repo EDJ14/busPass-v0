@@ -13,13 +13,13 @@ const InputsContainer = styled.div`
 const ColorChooser = styled.input`
   width: 33%;
   height: 10%;
-  margin; auto;
+  margin: auto;
 `;
 
-const PictureChooser = styled.input`
+const PictureChooser = styled.div`
   width: 33%;
   height: 10%;
-  margin; auto;
+  margin: auto;
 `;
 
 const Enter = styled.button`
@@ -37,7 +37,18 @@ class InputPage extends Component {
           <ColorChooser
             onChange={e => this.setState({ color: e.target.value })}
           />
-          <PictureChooser />
+          <PictureChooser>
+            ,
+            <input list="pictureList" />
+            <datalist id="pictureList">
+              <option value="BEACH" />
+              <option value="PIER" />
+              <option value="STOPLIGHT" />
+              <option value="BUILDING" />
+              <option value="SHADE" />
+            </datalist>
+            ,
+          </PictureChooser>
           <Enter onClick={() => this.setState({ enter: 1 })} />
         </InputsContainer>
       );
