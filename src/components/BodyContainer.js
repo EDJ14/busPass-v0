@@ -62,7 +62,7 @@ const Word = styled.div`
   color: white;
   z-index: 9;
   animation-name: example;
-  animation-duration: 1s;
+  animation-duration: 1.15s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 `;
