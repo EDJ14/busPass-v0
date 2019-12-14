@@ -1,5 +1,5 @@
 const axios = require('axios');
-const keys = require('./keys');
+const keys = require('../config/keys');
 // Read the file into memory.
 var fs = require('fs');
 var imageFile = fs.readFileSync('./src/img/BuildingPic.jpg');

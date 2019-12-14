@@ -1,3 +1,5 @@
-/node_modules
-/config
-/src/img
+/client/node_modules
+/client/config
+/clientsrc/img
+/server/node_modules
+/server/config
