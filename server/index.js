@@ -22,9 +22,10 @@ cloudinary.config({
 });
 
 //require('./services/passport')(connection);
-app.use(passport.initialize());
-app.use(passport.session());
+//app.use(passport.initialize());
+//app.use(passport.session());
 
+require('./routes/ImageUpload')(app);
 //require('./routes/authRoutes')(app);
 
 const PORT = process.env.PORT || 5000;
