@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import * as Vibrant from 'node-vibrant';
 
 import busText from '../img/BigBlueBus.jpg';
-import TT from '../img/TransitToken.png';
+import TT from '../img/TransitToken.jpg';
 import RandPic from '../img/image0.jpg';
 import TimeBox from './Time';
 
@@ -61,9 +61,9 @@ const Word = styled.div`
   font-size: 6rem;
   color: white;
   z-index: 9;
-  margin: auto;
   animation-name: example;
   animation-duration: 1s;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
 `;
 
@@ -87,8 +87,8 @@ class BodyContainer extends Component {
       <CircleTT>
         <img
           style={{
-            height: 'fit-content',
-            width: 'fit-content',
+            maxWidth: '60%',
+            maxHeight: '60%',
             margin: 'auto auto 1rem 35%'
           }}
           src={TT}

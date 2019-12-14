@@ -1,8 +1,8 @@
 @keyframes example {
-  from {
-    margin: auto;
+  0% {
+    transform: translateX(0);
   }
-  to {
-    margin: auto 0 auto auto;
+  100% {
+    transform: translateX(80%);
   }
 }
