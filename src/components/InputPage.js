@@ -22,13 +22,19 @@ const PictureChooser = styled.div`
   margin: auto;
 `;
 
+const WordChooser = styled.input`
+  width: 10rem;
+  height: 5rem;
+  font-size: 2.5rem;
+`;
+
 const Enter = styled.button`
   width: 50%;
   height: 15%;
 `;
 
 class InputPage extends Component {
-  state = { color: '', picture: null, enter: 0 };
+  state = { color: '', word: '', picture: null, enter: 0 };
 
   renderContent() {
     if (!this.state.enter) {
@@ -36,6 +42,9 @@ class InputPage extends Component {
         <InputsContainer>
           <ColorChooser
             onChange={e => this.setState({ color: e.target.value })}
+          />
+          <WordChooser
+            onChange={e => this.setState({ word: e.target.value })}
           />
           <PictureChooser>
             ,
@@ -56,6 +65,7 @@ class InputPage extends Component {
       return (
         <BodyContainer
           color={this.state.color}
+          word={this.state.word}
           picture={this.state.picture}
           goBack={() => this.setState({ enter: 0 })}
         />

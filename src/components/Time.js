@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const TimeBoxContainer = styled.div`
-  font-size: 11rem;
+  font-size: 24vw;
   z-index: 99;
   grid-row: 7 / 8;
   grid-column: 1 / -1;
@@ -21,8 +21,10 @@ class TimeBox extends Component {
       const newTime = new Date();
       this.setState({
         time:
+          (newTime.getHours() < 10 ? '0' : '') +
           newTime.getHours() +
           ':' +
+          (newTime.getMinutes() < 10 ? '0' : '') +
           newTime.getMinutes() +
           ':' +
           (newTime.getSeconds() < 10 ? '0' : '') +

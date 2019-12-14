@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "buspass-261903",
+  "private_key_id": "72ef20c978489c1055ba0a769db777af1b6d6e41",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCoqpl3YfR4U+uf\nr4XAj37rqItz8R33CA88SvR4vqFYZbteWT+k5w83xH2zc9fqBuU+Q5IAEDnECTCI\nxtbcg6cNZ91RFuMg8bmqwua9gah4y2J856/szYiRM5UqzFvhlKiwWi9XMvSk09Bn\n21z7GtD45o2Wh+qIL6Eg9EEGB1E12FvHwNOIhDqhLwkBS95QgxdgYO3jKQDtShLe\nTEGbwbdNBGefeCCLCty2hBRjvJtUEvkEMl3tWoNui337nLnRAwsYQEGZDtvkyEOL\nYJ+hkyaDs584sC11IUI5XGGQ3yPbP5A/fD6L1AewZ8ooZPulrIr4xB9UIL7x/M7J\ndR6BlXx5AgMBAAECggEABU+h7NLGekeCODwJr9TqP+IbH2KB+WEP7GvGePWKam3W\n/D3pNXhvz+doYeSNnE6X8gxPUPXcgSIc8iGjaxGGNXOGJ43bRxKgMGgEu1uVgiro\nBgYxpvjt36H1L4InM9o/hEDCvtyEPEXN3odXd9y8pH8gtD3BZ9pqw3k4LEgXXuT3\nvD2Acas8DhYjfBExOQM8VjS2k5O/5vqpczrN0IU7cteQfQwYeOQX14rN392uunw+\nNaoVEI/SXj/Rt4PeR1zqvV+8dWjwoeuw6uDEi5xUkbC7NAlOSI8hGPNxmKrRpFwg\nzKwPrbU3vpbtfn+B6NYQFCoOO5ZvfzqsBrH/2iYQxQKBgQDkiIBr6YjhuJSvFp7y\n29gkfTMomBH6Df856S6zyRA5u+vzbLhvDm2HCE/nqciPz36cNJ2RzM8aYC8jY8Fz\n3BJSc2lvlRVW/c4w7VGuaaunbjyhG73ruEWVNgB8nbTKMAVZxvlyCvSq8fp+nVgB\nQzUWz0Gmd+GsKlAK+D53NqJbzwKBgQC88B50NjLVFdDyD3nbgquGk9I/fSqGra9G\njKII9yiVVYIQIyDtHZqjgXccT1MJI91Xp0+m345QR0blshUwd5/eXFWUd9SL8vg7\nZqWHcEe829OW2UZ9N16NChLCqBq5CrveITzU969W+oy2AkN39uBewX8ykVHA0ua0\n2B2mvKHNNwKBgC970Tsaxe8oe/Q5PgN1/F3wiZ2ooyuSlvJAagy+/RkR27+zWkrw\n8374EiovU9XVphfsssSlim6Ph5vR0VMyabgp9MFTd6CgkaQG207i8+CQ/hX3fqmo\nmwSauNUrq3HLMoFp31B7yERwjLycEroIbdJ0c86T4Bb2n7T3yXrZpjhvAoGAcURe\nbXrkhHw8tDD089TlcZuC6s7lxLGxJ1E9/rP1X3lQrM3yelRKFYWS26TuecdHdbn2\n9WqGTbg9V4yoSVMdw1eFcqlYAcJacHn7+DMmvqDmu0Nsj7q280S7tHjE9HPr5qH0\nbxRByJoR6zd2LSASqJvF3pHh+gA1kOsS85eYRIcCgYA/yBiiJWtvahDAUaMSkB/y\n/h8UsRcI/q7ryZ09kuWiTqHw8o7X+2z+MRpTyNqo/zDZMqNajzh/JVu0KkyRW4d3\nYo/Iqrwu5x5DCLI+kibiqgwEOnGlJn6VjQJ6tEo/zGmGUnr3B55beYkAZ8yM7wJL\nCD/6c3xkfCCFqkVVC3qDiA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "cloudvisionacct@buspass-261903.iam.gserviceaccount.com",
+  "client_id": "102743562348520112499",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloudvisionacct%40buspass-261903.iam.gserviceaccount.com"
+}

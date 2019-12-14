@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import * as Vibrant from 'node-vibrant';
 
-import busText from '../img/bigBlueBus.JPG';
-import TT from '../img/TT.JPG';
+import busText from '../img/BigBlueBus.jpg';
+import TT from '../img/TransitToken.png';
 import RandPic from '../img/image0.jpg';
 import TimeBox from './Time';
 
@@ -62,6 +62,9 @@ const Word = styled.div`
   color: white;
   z-index: 9;
   margin: auto;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 `;
 
 class BodyContainer extends Component {
@@ -74,8 +77,8 @@ class BodyContainer extends Component {
       <BigBlueBus>
         <img
           style={{
-            height: 'fit-content',
-            width: 'fit-content',
+            maxWidth: '60%',
+            maxHeight: '60%',
             margin: 'auto 15% 1rem 15%'
           }}
           src={busText}
@@ -93,7 +96,7 @@ class BodyContainer extends Component {
       </CircleTT>,
       <PictureWordContainer color={this.props.color}></PictureWordContainer>,
       <PictureBox />,
-      <Word>PIER</Word>,
+      <Word>{this.props.word.toUpperCase()}</Word>,
       <TimeBox />
     ];
   }

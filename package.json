@@ -32,7 +32,9 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "@google-cloud/vision": "^1.7.2",
     "axios": "^0.18.1",
+    "google-auth-library": "^5.7.0",
     "node-vibrant": "^3.1.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -41,6 +43,7 @@
     "react-loadable": "^5.5.0",
     "react-router-dom": "^5.0.0",
     "react-transition-group": "^4.0.1",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "tesseract.js": "^1.0.19"
   }
 }
