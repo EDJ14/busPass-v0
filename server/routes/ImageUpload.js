@@ -5,6 +5,6 @@ module.exports = app => {
   app.post('/api/upload', (req, res) => {
     console.log(req.body);
 
-    // cloudUpload(req.IMAGE)
+    res.sendStatus(200);
   });
 };

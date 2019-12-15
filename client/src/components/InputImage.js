@@ -1,22 +1,24 @@
 import React from 'react';
-const axios = require('axios');
-import FormData from 'form-data';
+import axios from 'axios';
 
 class InputImage extends React.Component {
   state = { file: null };
 
   onFormSubmit = async e => {
     e.preventDefault();
+    console.log(e.target);
     const formData = new FormData();
-    //formData.append('myImage', this.state.file);
-    formData.append('foo', 'bar');
-    const response = await axios({
-      method: 'post',
-      url: '/api/upload',
-      data: { foo: 'bar' },
-      headers: {
-        'content-type': `multipart/form-data; boundary=${formData._boundary}`
-      }
+    formData.append('myImage', this.state.file);
+
+    for (var pair of formData.entries()) {
+      console.log(pair[0] + ', ' + pair[1]);
+    }
+
+    fetch('/api/upload', {
+      method: 'POST',
+      body: formData
+    }).then(res => {
+      console.log(res);
     });
   };
 
