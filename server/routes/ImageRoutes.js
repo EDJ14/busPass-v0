@@ -1,5 +1,6 @@
-const cloudUpload = require('../services/cloudUpload');
+const cloudUpload = require('../services/gCloudUpload');
 const multer = require('multer');
+const vision = require('../services/cloudVision');
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
@@ -16,10 +17,11 @@ const upload = multer({
 });
 
 module.exports = app => {
-  app.post('/api/upload', upload.single('myImage'), (req, res) => {
+  app.post('/api/upload', upload.single('myImage'), async (req, res) => {
     console.log(req.file);
 
     cloudUpload('./uploads/' + req.file.filename);
+    vision('./uploads/' + req.file.filename);
 
     res.sendStatus(200);
   });
