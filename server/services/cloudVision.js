@@ -32,6 +32,7 @@ module.exports = img => {
       body
     )
     .then(function(res) {
-      console.log(res.data.responses[0].fullTextAnnotation.text);
+      const { text } = res.data.responses[0].fullTextAnnotation;
+      console.log(text.slice(53, text.length - 18));
     });
 };
