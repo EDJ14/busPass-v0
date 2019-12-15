@@ -26,9 +26,15 @@ module.exports = app => {
     const path = './uploads/' + req.file.filename;
 
     //cloudUpload(path);
-    vision(path);
-    //analyzeColor(path);
+    let words = null;
+    let colors = null;
 
-    res.sendStatus(200);
+    vision(path).then(wordsRes => {
+      words = wordsRes;
+      analyzeColor(path).then(colorRes => {
+        colors = colorRes.DarkVibrant;
+        res.send({ colors, words });
+      });
+    });
   });
 };

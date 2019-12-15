@@ -25,7 +25,7 @@ module.exports = img => {
     ]
   };
 
-  axios
+  return axios
     .post(
       'https://vision.googleapis.com/v1/images:annotate?key=' +
         keys.googleVisionKey,
@@ -34,5 +34,6 @@ module.exports = img => {
     .then(function(res) {
       const { text } = res.data.responses[0].fullTextAnnotation;
       console.log(text.slice(53, text.length - 18));
+      return text.slice(55, text.length - 18);
     });
 };

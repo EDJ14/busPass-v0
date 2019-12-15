@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 class InputImage extends React.Component {
-  state = { file: null };
+  state = { file: null, color: null, word: null };
 
   onFormSubmit = async e => {
     e.preventDefault();

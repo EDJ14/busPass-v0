@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import * as Vibrant from 'node-vibrant';
 
 import busText from '../img/BigBlueBus.jpg';
 import TT from '../img/TransitToken.jpg';
