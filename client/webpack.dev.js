@@ -35,6 +35,10 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
+    proxy: {
+      '/api': 'http://localhost:5000',
+      '/auth': 'http://localhost:5000'
+    },
     disableHostCheck: true,
     historyApiFallback: true,
     contentBase: path.join(__dirname, 'public/'),

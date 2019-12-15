@@ -1,7 +1,7 @@
 const express = require('express');
 const cookieSession = require('cookie-session');
 const bodyParser = require('body-parser');
-const passport = require('passport');
+//const passport = require('passport');
 
 const keys = require('./config/keys');
 
@@ -14,12 +14,6 @@ app.use(
     keys: [keys.cookieKey]
   })
 );
-
-cloudinary.config({
-  cloud_name: 'sample',
-  api_key: keys.cloudinaryKey,
-  api_secret: keys.cloudinarySecret
-});
 
 //require('./services/passport')(connection);
 //app.use(passport.initialize());
