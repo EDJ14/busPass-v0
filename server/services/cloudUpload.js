@@ -1,8 +1,8 @@
 /**
  * TODO(developer): Uncomment the following lines before running the sample.
  */
-module.exports = img => {
-  const bucketName = 'buss-pass-bucket';
+module.exports = filename => {
+  const bucketName = 'bus-pass-bucket';
   // const filename = 'Local file to upload, e.g. ./local/path/to/file.txt';
 
   // Imports the Google Cloud client library
@@ -13,7 +13,7 @@ module.exports = img => {
 
   async function uploadFile() {
     // Uploads a local file to the bucket
-    await storage.bucket(bucketName).upload(img, {
+    await storage.bucket(bucketName).upload(filename, {
       // Support for HTTP requests made with `Accept-Encoding: gzip`
       gzip: true,
       // By setting the option `destination`, you can change the name of the

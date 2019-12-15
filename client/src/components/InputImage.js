@@ -6,20 +6,19 @@ class InputImage extends React.Component {
 
   onFormSubmit = async e => {
     e.preventDefault();
-    console.log(e.target);
+
     const formData = new FormData();
-    formData.append('myImage', this.state.file);
+    formData.append('myImage', this.state.file, this.state.file.name);
 
-    for (var pair of formData.entries()) {
-      console.log(pair[0] + ', ' + pair[1]);
-    }
-
-    fetch('/api/upload', {
-      method: 'POST',
-      body: formData
-    }).then(res => {
-      console.log(res);
-    });
+    axios
+      .post('api/upload', formData, {
+        onUploadProgress: progressEvent => {
+          'Upload Progress" ', progressEvent.loaded / progressEvent.total;
+        }
+      })
+      .then(res => {
+        console.log(res);
+      });
   };
 
   onChange = e => {
