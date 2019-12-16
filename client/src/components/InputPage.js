@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import BodyContainer from './BodyContainer';
+import InputImage from './InputImage';
 
 const InputsContainer = styled.div`
   height: 100%;
@@ -10,63 +11,36 @@ const InputsContainer = styled.div`
   justify-content: space-around;
 `;
 
-const ColorChooser = styled.input`
-  width: 33%;
-  height: 10%;
-  margin: auto;
-`;
-
-const PictureChooser = styled.div`
-  width: 33%;
-  height: 10%;
-  margin: auto;
-`;
-
-const WordChooser = styled.input`
-  width: 10rem;
-  height: 5rem;
-  font-size: 2.5rem;
-`;
-
-const Enter = styled.button`
-  width: 50%;
-  height: 15%;
+const Loading = styled.div`
+  widht: 100%;
+  height: 100%;
+  background-color: orange;
 `;
 
 class InputPage extends Component {
-  state = { color: '', word: '', picture: null, enter: 0 };
+  state = { color: '', word: '', enter: 0, loading: 0 };
 
   renderContent() {
+    console.log(this.state);
+
     if (!this.state.enter) {
       return (
         <InputsContainer>
-          <ColorChooser
-            onChange={e => this.setState({ color: e.target.value })}
+          <InputImage
+            chosenImage={(color, word) =>
+              this.setState({ color, word, loading: 0 })
+            }
+            setLoading={() => this.setState({ enter: 1, loading: 1 })}
           />
-          <WordChooser
-            onChange={e => this.setState({ word: e.target.value })}
-          />
-          <PictureChooser>
-            ,
-            <input list="pictureList" />
-            <datalist id="pictureList">
-              <option value="BEACH" />
-              <option value="PIER" />
-              <option value="STOPLIGHT" />
-              <option value="BUILDING" />
-              <option value="SHADE" />
-            </datalist>
-            ,
-          </PictureChooser>
-          <Enter onClick={() => this.setState({ enter: 1 })} />
         </InputsContainer>
       );
+    } else if (this.state.loading) {
+      return <Loading />;
     } else {
       return (
         <BodyContainer
           color={this.state.color}
           word={this.state.word}
-          picture={this.state.picture}
           goBack={() => this.setState({ enter: 0 })}
         />
       );

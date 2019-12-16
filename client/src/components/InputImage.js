@@ -1,11 +1,16 @@
 import React from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
+
+const ImgInputContainter = styled.div``;
 
 class InputImage extends React.Component {
-  state = { file: null, color: null, word: null };
+  state = { file: null };
 
   onFormSubmit = async e => {
     e.preventDefault();
+
+    this.props.setLoading();
 
     const formData = new FormData();
     formData.append('myImage', this.state.file, this.state.file.name);
@@ -18,6 +23,11 @@ class InputImage extends React.Component {
       })
       .then(res => {
         console.log(res);
+        const { rgb } = res.data.colors;
+        this.props.chosenImage(
+          `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`,
+          res.data.words
+        );
       });
   };
 
