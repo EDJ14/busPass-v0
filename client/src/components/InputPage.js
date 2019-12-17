@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import BodyContainer from './BodyContainer';
 import InputImage from './InputImage';
+import Loading from './Loading';
 
 const InputsContainer = styled.div`
   height: 100%;
@@ -9,12 +10,6 @@ const InputsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-`;
-
-const Loading = styled.div`
-  widht: 100%;
-  height: 100%;
-  background-color: orange;
 `;
 
 class InputPage extends Component {

@@ -6,12 +6,6 @@ import TT from '../img/TransitToken.jpg';
 import RandPic from '../img/image0.jpg';
 import TimeBox from './Time';
 
-const ColorButton = styled.button`
-  width: 4rem;
-  heigh: 2rem;
-  backgorund-colo: blue;
-`;
-
 const BigBlueBus = styled.div`
   grid-row: 1 / 2;
   grid-column: 1 / 2;
@@ -67,18 +61,14 @@ const Word = styled.div`
 `;
 
 class BodyContainer extends Component {
-  changeColor = newColor => {
-    this.props.goBack();
-  };
-
   render() {
     return [
       <BigBlueBus>
         <img
           style={{
-            maxWidth: '60%',
+            maxWidth: '50%',
             maxHeight: '60%',
-            margin: 'auto 15% 1rem 15%'
+            margin: 'auto 5% .5rem 5%'
           }}
           src={busText}
         />
