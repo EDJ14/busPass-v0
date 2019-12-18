@@ -76,8 +76,8 @@ class BodyContainer extends Component {
       <CircleTT>
         <img
           style={{
-            maxWidth: '60%',
-            maxHeight: '60%',
+            maxWidth: '50%',
+            maxHeight: '50%',
             margin: 'auto auto 1rem 35%'
           }}
           src={TT}
