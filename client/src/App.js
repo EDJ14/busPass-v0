@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import BodyContainer from './components/BodyContainer';
 import InputPage from './components/InputPage';
+import ChoosePicture from './components/ChoosePicture';
 
 class App extends Component {
   componentDidMount() {
@@ -14,6 +14,7 @@ class App extends Component {
       <div className="container">
         <BrowserRouter>
           <Route exact path="/" component={InputPage} />
+          <Route exact path="/choose" component={ChoosePicture} />
         </BrowserRouter>
       </div>
     );
